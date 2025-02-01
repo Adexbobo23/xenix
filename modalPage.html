@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Airdrop Modal</title>
+    <script charset="UTF-8" type="text/javascript" src="./e8769dc6-bd66-4424-a6a1-c939bc7ab0ea.js"></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #airdropModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: #1F1F1F;
+            padding: 30px;
+            border-radius: 12px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.3s ease-in-out;
+            padding: 75px;
+        }
+
+        h2 {
+            color: #FFA500;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #ccc;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button, a.button-link {
+            width: 100%;
+            padding: 12px;
+            background: #FFA500;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        a.button-link {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background: #ff9000;
+        }
+
+        .close {
+            background: #ff4b4b;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .close:hover {
+            background: #e00000;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="airdropModal">
+        <div class="modal-content">
+            <h2>Connect Wallet</h2>
+            <p>Select how you want to connect your wallet.</p>
+            <div class="button-group">
+                <a href="wallet.html" class="button-link">
+                    <button>Connect Manually</button>
+                </a>
+                <a href="#" class="button-link interact-button">
+                    <button>Connect with Web3</button>
+                </a>
+            </div>
+            <button class="close" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            document.getElementById("airdropModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>
