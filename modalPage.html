@@ -17,7 +17,7 @@
             align-items: center;
             height: 100vh;
         }
-
+    
         #airdropModal {
             display: none;
             position: fixed;
@@ -32,7 +32,7 @@
             z-index: 9999;
             backdrop-filter: blur(5px);
         }
-
+    
         .modal-content {
             background: #1F1F1F;
             padding: 30px;
@@ -43,28 +43,28 @@
             animation: fadeIn 0.3s ease-in-out;
             padding: 75px;
         }
-
+    
         h2 {
-            color: #FFA500;
+            color: #8000FF; /* Purple heading */
             margin-bottom: 15px;
         }
-
+    
         p {
             color: #ccc;
             font-size: 14px;
             margin-bottom: 25px;
         }
-
+    
         .button-group {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-
+    
         button, a.button-link {
             width: 100%;
             padding: 12px;
-            background: #FFA500;
+            background: #8000FF; /* Purple button */
             color: white;
             border: none;
             border-radius: 8px;
@@ -72,26 +72,26 @@
             cursor: pointer;
             transition: 0.3s ease-in-out;
         }
-
+    
         a.button-link {
             display: inline-block;
             text-decoration: none;
         }
-
+    
         button:hover {
-            background: #ff9000;
+            background: #6A00CC; /* Darker purple on hover */
         }
-
+    
         .close {
             background: #ff4b4b;
             margin-top: 15px;
             width: 100%;
         }
-
+    
         .close:hover {
             background: #e00000;
         }
-
+    
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -103,6 +103,7 @@
             }
         }
     </style>
+    
 </head>
 <body>
 
